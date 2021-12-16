@@ -1,0 +1,369 @@
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+:root {
+    --color-1: #d95d30;
+    --color-2: #E69127;
+    --bg-color: #0D0D0D;
+    --bg-color-2: #1B1B1B;
+    --bg-color-3: #7c341a;
+    --ft-color: #fff;
+    --ft-color-2: rgb(190, 190, 190);
+    --ft-primary: "Poppins";
+    --ft-secondary: "Bebas Neue";
+    --banner-fs: 3rem;
+    --fs-h3: 2em;
+    --fs-h4: 1.3em;
+    --fs-p: 1.1em;
+    --fs-icon: 2em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--ft-color);
+}
+
+body {
+    font-family: var(--ft-primary);
+    background-color: var(--color-1);
+}
+
+main {
+    background-color: var(--bg-color);
+    margin-bottom: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1600px;
+    width: 100%;
+    min-height: 100vh;
+    .section-title {
+        padding: 40px;
+        text-align: center;
+        position: relative;
+        font-family: var(--ft-secondary);
+        font-size: var(--fs-h3);
+        letter-spacing: 3px;
+        &::before {
+            content: "";
+            border-radius: 5px;
+            height: 3px;
+            width: 75px;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--color-1);
+            position: absolute;
+        }
+    }
+}
+
+.section-content {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
+.banner {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    .text {
+        font-size: var(--banner-fs);
+    }
+    span:nth-child(1) {
+        font-weight: 400;
+    }
+    p {
+        font-family: var(--ft-secondary);
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: var(--color-2) 3px solid;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        transition: background-color 0.3s;
+        ion-icon {
+            font-size: var(--fs-icon);
+        }
+        &:hover {
+            background-color: var(--color-2);
+        }
+    }
+}
+
+.what {
+    .cards {
+        flex: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        gap: 15px;
+    }
+    .card {
+        height: fit-content;
+        background-color: var(--bg-color-2);
+        border-radius: 5px;
+        padding: 20px;
+        // max-width: 600px;
+        height: auto;
+        flex: 1 4 300px;
+    }
+    h4 {
+        font-size: var(--fs-h4);
+        margin-bottom: 5px;
+    }
+    p {
+        color: var(--ft-color-2);
+    }
+    ion-icon {
+        margin: 10px 0;
+        color: var(--color-1);
+        font-size: var(--fs-icon);
+    }
+}
+
+.who {
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .about {
+        font-size: var(--fs-p);
+        display: flex;
+        flex-direction: column;
+        p {
+            padding: 10px 0;
+        }
+    }
+    .btn-4 {
+        margin: 20px 0;
+        width: fit-content;
+        position: relative;
+        color: var(--ft-color);
+        background-color: var(--bg-color-1);
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+        padding: 20px 40px;
+        font-family: var(--ft-secondary);
+        font-size: var(--fs-p);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        ion-icon {
+            font-size: var(--fs-icon);
+            color: var(--color-2);
+        }
+    }
+    .btn-4:hover {
+        border: none;
+    }
+    .btn-4:before,
+    .btn-4:after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border: 2px solid;
+        z-index: -1;
+        transition: all 0.3s ease;
+        transition-delay: border-color 2s;
+    }
+    .btn-4:before {
+        top: 2px;
+        left: 2px;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-top-color: var(--color-2);
+        border-left-color: var(--color-2);
+    }
+    .btn-4:after {
+        bottom: 2px;
+        right: 2px;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: var(--color-2);
+        border-right-color: var(--color-2);
+    }
+    .btn-4:hover:before,
+    .btn-4:hover:after {
+        border-color: var(--color-2);
+        height: 100%;
+        width: 100%;
+    }
+    .quote {
+        padding: 20px 0;
+        text-align: center;
+        font-family: var(--ft-secondary);
+        font-size: var(--fs-h3);
+    }
+}
+
+.skills {
+    .section-content {
+        gap: 15px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    h4 {
+        width: 150px;
+        text-align: center;
+    }
+    .cards {
+        width: 100%;
+        flex: auto;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .card {
+        position: relative;
+        min-width: 200px;
+        max-width: 400px;
+        flex: 1;
+        height: 100px;
+        padding: 20px;
+        text-align: center;
+        background-color: var(--bg-color-2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        ion-icon {
+            font-size: var(--fs-icon);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            top: 0;
+            left: 0;
+            border-style: solid;
+            border-width: 20px 20px 0 0;
+            border-color: var(--color-2) transparent transparent transparent;
+        }
+        &.skill::before {
+            border-color: var(--color-1) transparent transparent transparent;
+        }
+    }
+}
+
+.contact {
+    position: fixed;
+    z-index: -100;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .section-content {
+        position: relative;
+        padding: 50px;
+        width: calc(100% - 200px);
+        flex-direction: row;
+        min-height: 350px;
+        flex: 0;
+        background-color: var(--bg-color-2);
+    }
+    .text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        a {
+            text-decoration: none;
+            &:hover ion-icon {
+                color: var(--color-2)
+            }
+        }
+        ion-icon {
+            font-size: calc(var(--fs-icon) + 1em);
+            transition: color 0.3s ease;
+        }
+        h4 {
+            font-size: var(--fs-h4);
+            padding: 20px 0;
+        }
+    }
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        img {
+            transform: rotate(-25deg) translateX(20px);
+            width: 100%;
+        }
+    }
+    .hey {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(50%);
+        font-weight: 800;
+        font-size: var(--banner-fs);
+        letter-spacing: 2px;
+    }
+}
+
+.colored {
+    color: var(--color-1);
+}
+
+.colored-2 {
+    color: var(--color-2);
+}
+
+@media screen and (max-width:700px) {
+    .banner {
+        flex-direction: column;
+        justify-content: space-around;
+        .text {
+            font-size: calc(var(--banner-fs) - 0.5em);
+            text-align: center;
+        }
+        .buttons {
+            flex-direction: row;
+        }
+    }
+    .what .cards {
+        padding: 0;
+        .card {
+            flex-basis: 250px;
+            max-width: none;
+            padding: 10px 20px;
+        }
+    }
+    .contact .section-content {
+        width: calc(100% - 100px);
+    }
+}
