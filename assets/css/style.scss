@@ -102,7 +102,7 @@ section {
         width: 60px;
         height: 60px;
         transition: background-color 0.3s;
-        ion-icon {
+        ion-icon, img {
             font-size: var(--fs-icon);
         }
         &:hover {
@@ -125,7 +125,6 @@ section {
         background-color: var(--bg-color-2);
         border-radius: 5px;
         padding: 20px;
-        // max-width: 600px;
         height: auto;
         flex: 1 4 300px;
     }
@@ -228,6 +227,7 @@ section {
         padding-bottom: 50px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 30px;
     }
@@ -237,7 +237,6 @@ section {
     }
     .cards {
         width: 100%;
-        flex: auto;
         display: flex;
         justify-content: center;
         gap: 15px;
@@ -245,9 +244,7 @@ section {
     }
     .card {
         position: relative;
-        min-width: 200px;
-        max-width: 400px;
-        flex: 1;
+        flex: 1 1 250px;
         height: 100px;
         padding: 20px;
         text-align: center;
